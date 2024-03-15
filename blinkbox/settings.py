@@ -54,7 +54,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-   os.environ.get('ALLOWED_HOST'),
+   'https://blink-box-drf-1e212f83bc7c.herokuapp.com/',
    'localhost',
    '127.0.0.1',
 ]
