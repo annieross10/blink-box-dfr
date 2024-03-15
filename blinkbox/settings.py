@@ -53,7 +53,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', 'blink-box-dfr.herokuapp.com', '127.0.0.1', 'blink-box-drf-1e212f83bc7c.herokuapp.com']
+ALLOWED_HOSTS = ['http://localhost:3000', 'blink-box-dfr.herokuapp.com', '127.0.0.1', 'blink-box-drf-1e212f83bc7c.herokuapp.com']
 
 
 # Application definition
@@ -104,14 +104,11 @@ if 'CLIENT_ORIGIN' in os.environ:
     ]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https://.*\.gitpod\.io$",
+        r"http://localhost:3000",
     ]
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000','https://blink-box-c094174c6d2b.herokuapp.com'
-]
 
 ROOT_URLCONF = 'blinkbox.urls'
 
